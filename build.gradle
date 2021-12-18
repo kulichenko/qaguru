@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+}
+
+group 'ru.kulichenkom'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation ("com.codeborne:selenide:6.1.1",
+            "com.codeborne:selenide:6.1.1",
+            'org.junit.jupiter:junit-jupiter-api:5.8.2')
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
