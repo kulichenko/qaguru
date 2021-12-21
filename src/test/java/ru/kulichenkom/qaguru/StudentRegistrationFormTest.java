@@ -14,6 +14,7 @@ public class StudentRegistrationFormTest {
 
     //Элементы формы регистрации
     private SelenideElement
+            formTitle = $("h5"),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmail = $("#userEmail"),
@@ -35,12 +36,11 @@ public class StudentRegistrationFormTest {
             city = $("#city"),
             cityDropDownList = $("#react-select-4-input"),
             submitButton = $("#submit");
-    private ElementsCollection days = $$(".react-datepicker__day");
+    private ElementsCollection days = $$(".react-datepicker__day:not(.react-datepicker__day--outside-month)");
 
     //Элементы формы подтверждения регистрации
     private SelenideElement modalHeader = $(".modal-header");
     private ElementsCollection tableRows = $("tbody").$$("tr");
-
 
 
     @BeforeAll
@@ -52,6 +52,7 @@ public class StudentRegistrationFormTest {
     @Test
     void fillRegistrationFormTest() {
         open("/automation-practice-form");
+        formTitle.shouldHave(text("Student Registration Form"));
         firstNameInput.setValue("Ivan");
         lastNameInput.setValue("Ivanov");
         userEmail.setValue("IvanovIvan654894@gmail.com");
