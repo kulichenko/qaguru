@@ -1,6 +1,5 @@
 package ru.kulichenkom.qaguru;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
