@@ -16,7 +16,7 @@ public class GithubWikiTest {
             wikiTab = $("#wiki-tab"),
             authorName = $(".author"),
             wikiPageHeader = $(".markdown-body h1"),
-            softAssertionsLink = $(byText("Soft assertions")),
+            softAssertionsLink = $("#wiki-pages-box").$(byText("SoftAssertions")),
             softAssertionsPageHeader = $(".gh-header-title"),
             codeBlocks = $(".markdown-body");
 
