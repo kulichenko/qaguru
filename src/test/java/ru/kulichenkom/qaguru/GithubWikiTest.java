@@ -16,6 +16,7 @@ public class GithubWikiTest {
             wikiTab = $("#wiki-tab"),
             authorName = $(".author"),
             wikiPageHeader = $(".markdown-body h1"),
+            showMorePages = $(".wiki-more-pages-link").$(".btn-link"),
             softAssertionsLink = $("#wiki-pages-box").$(byText("SoftAssertions")),
             softAssertionsPageHeader = $(".gh-header-title"),
             codeBlocks = $(".markdown-body");
@@ -31,6 +32,7 @@ public class GithubWikiTest {
         authorName.shouldHave(text("selenide"));
         wikiTab.click();
         wikiPageHeader.shouldHave(text("Welcome to the selenide wiki!"));
+        showMorePages.scrollTo().click();
         softAssertionsLink.click();
         softAssertionsPageHeader.shouldHave(text("SoftAssertions"));
         codeBlocks.shouldHave(text("Using JUnit5 extend test class:"));
